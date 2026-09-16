@@ -1,0 +1,4 @@
+# Optional scanned-PDF/image text extraction.
+-r requirements.txt
+rapidocr-onnxruntime==1.4.4
+numpy==2.5.3

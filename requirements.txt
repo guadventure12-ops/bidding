@@ -1,0 +1,11 @@
+# Core runtime; Python 3.12. OCR and test tools are installed separately.
+fastapi==0.141.1
+uvicorn==0.52.4
+python-multipart==0.0.32
+httpx==0.28.1
+pydantic==2.13.5
+python-docx==1.2.0
+pypdf==6.19.0
+PyMuPDF==1.28.2
+Pillow==12.3.0
+lxml==6.1.3
