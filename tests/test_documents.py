@@ -108,7 +108,7 @@ class DocumentsTests(unittest.TestCase):
     def test_export_has_chinese_fonts_repeat_table_headers_and_fields(self):
         path = self.root / "bid.docx"
         result = compose_docx({"name": "电子会计档案系统投标"}, [{"id": "r1", "text": "必须提供电子档案四性检测", "source_locator": "正文 / 段落 15", "mandatory": True, "response": "", "evidence_ids": []}], [{"title": "技术方案", "content": "## 归档流程\n需核验原文要求。\n\n| 项目 | 响应 |\n| --- | --- |\n| 接口 | 待确认 |"}], str(path), {"name": "示例公司"})
-        self.assertEqual(result["path"], str(path))
+        self.assertEqual(result["path"], str(path.resolve()))
         with zipfile.ZipFile(path) as zf:
             xml = zf.read("word/document.xml").decode()
             settings = zf.read("word/settings.xml").decode()
